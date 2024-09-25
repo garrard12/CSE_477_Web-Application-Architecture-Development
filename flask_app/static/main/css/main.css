@@ -1,0 +1,212 @@
+
+/* Give the dimension of the header */
+main{
+    min-height: 40vh;
+    width: 100vw;
+    top: 25vh;
+}
+/* Sets up the main to be in columns*/
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5%;
+    height: auto;
+    max-width: 80vw;
+    white-space: normal;
+    margin: 5%;
+}
+/* Makes the text on the screen the proper height/width*/
+.text{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    max-height: 50vh;
+    max-width: 80vw;
+    /*padding: 0; */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Fix the over flow problem in the pargh */
+#personalPargh{
+    max-height: 47vh;
+}
+/* Text for the fun fact */
+.funFact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Font-size: 4vh;
+    color: #000000;
+    margin: 5%;
+}
+/* gives the proper dimension to an image*/
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+/*space want around the box*/
+.box{
+    padding: 5%;
+    margin: 5%;
+    overflow: hidden;
+}
+/*Hides the menu when in mobile  view*/
+.hidden-menu {
+    display: none;
+}
+/* Makes the fun fact spread across the right amount of columns */
+#funFact{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+/*The Get the Description of what each project is going to be */
+#ProjectDescription{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+/* The poem that is on top of the page */
+#poem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    Font-size: 3vh;
+    color: #000000;
+    margin: 5%;
+}
+/*The white keys on the piano */
+.white{
+ float: left;
+ height: 30vh;
+ width: calc(9%);
+ border: 1px solid #000000;
+ background: #ffffff;
+ z-index: 1;
+ display: flex;
+    justify-content: center;
+    align-items: flex-end;
+ color: #ffffff;
+}
+/*The black keys on the piano*/
+.black{
+ position: relative;
+ float: left;
+ height: 20vh;
+ width: calc(6%);
+ border: 1px solid #000000;
+ background: #050139;
+ z-index: 2;
+ margin-left: calc(-4%);
+ margin-right: calc(-4%);
+ display: flex;
+    justify-content: center;
+    align-items: flex-end;
+ color: #050139;
+}
+/*Where all the keys sit on the piano*/
+.Keys {
+    position: absolute;
+    width: calc(90%);
+    height: 40vh;
+    bottom: calc(10%);
+    color: #000000;
+    justify-content: center;
+    justify-items: center;
+    object-fit: cover;
+    text-align: center;
+    filter: brightness(1);
+    margin-left: 7vw;
+    padding: 15%;
+}
+/* The back ground for the piano*/
+#pianoBackground{
+    position: relative;
+    width: 70vw;
+    height: 50vh;
+    background-color: #808080;
+    border-radius: 5%;
+}
+/*The tittle to the key board */
+#GreatOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5vh ;
+}
+/*The monster image */
+.monster{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    animation: fadeIn 3s;
+}
+
+/* The text need for the feed back */
+.feedback{
+    border-radius: 5%;
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    transform: rotate(90deg) translateX(-50%) translateY(-50%);
+    transform-origin: left center;
+    background-color: #FFC0CB;
+}
+
+/*fading in images*/
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* Makes the header possible for moblie view  */
+@media screen and (max-width:650px){
+    /* update the wrapper  for mobile view */
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 5%;
+        height: auto;
+        margin: 5%;
+    }
+    /* update the text for mobile view */
+    .text{
+        height: auto;
+        overflow: visible;
+    }
+    /* update the main for mobile view */
+    main{
+        min-height: auto;
+        height: auto;
+    }
+    /* Sends the main to the back */
+    #desktop{
+        z-index: 2;
+        background-color: #A9A9A9;
+    }
+    /*puts the funFact at the bottom of the page */
+    #funFact{
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-row-start: auto;
+        grid-row-end: auto;
+    }
+    /* Project Description in the correct spot once in mobile*/
+    #ProjectDescription{
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-row-start: auto;
+        grid-row-end: auto;
+    }
+}

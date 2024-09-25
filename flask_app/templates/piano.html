@@ -1,0 +1,41 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<div class = "wrapper">
+    <!-- The poem at top of the page   -->
+     <div id = "ProjectDescription" class="text">
+        <div id = "poem" class = "funFact ">
+          <p> Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, call out to it - we see you.</p>
+        </div>
+    </div>
+    <!-- piano screen -->
+        <div id="pianoBackground">
+            <div id = "monsterImage"></div>
+            <div id="GreatOne"> <p>The Great Old One</p> </div>
+                <div id="Keys">
+                    <div id="A" class = "white"><p>A</p></div>
+                    <div id="W" class = "black"><p>W</p></div>
+                    <div id="S" class = "white"><p>S</p></div>
+                    <div id="E" class = "black"><p>E</p></div>
+                    <div id="D" class = "white"><p>D</p></div>
+                    <div id="F" class = "white"><p>F</p></div>
+                    <div id="T" class = "black"><p>T</p></div>
+                    <div id="G" class = "white"><p>G</p></div>
+                    <div id="Y" class = "black"><p>Y</p></div>
+                    <div id="H" class = "white"><p>H</p></div>
+                    <div id="U" class = "black"><p>U</p></div>
+                    <div id="J" class = "white"><p>J</p></div>
+                    <div id="K" class = "white"><p>K</p></div>
+                    <div id="O" class = "black"><p>O</p></div>
+                    <div id="L" class = "white"><p>L</p></div>
+                    <div id="P" class = "black"><p>P</p></div>
+                    <div id="Colon" class = "white"><p>;</p></div>
+                </div>
+        </div>
+
+</div>
+{% endblock %}
+
+{% block extrajs %}
+  <script src="{{ url_for('static', filename='piano/js/piano.js') }}" defer></script>
+{% endblock %}

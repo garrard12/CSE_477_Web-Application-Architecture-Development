@@ -1,0 +1,49 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+    <div class = "wrapper">
+         <div id = "ProjectDescription" class="text">
+            <div class = "funFact ">
+              <p> Below is a list of projects I worked on in CSE 477</p>
+            </div>
+        </div>
+        <!-- image of piano -->
+        <div class = "box">
+            <div class = "image">
+                <a href="/piano">
+                    <img src="{{ url_for('static', filename='main/images/piano.jpeg') }}" alt="piano" loading="lazy"/>
+                </a>
+            </div>
+        </div>
+        <!-- About the project  -->
+        <div class="box">
+            <div id = "header">
+                 <h1>Javascript piano </h1>
+            </div>
+            <div class = "text">
+                <p> As part of my first project for my web development course at Michigan State, I developed an interactive piano building in pure HTML, CSS, Javascript. This tool as well my website are tools that show I can build mobile-friendly front in application. <a href="/piano">click here</a>    </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wordle project-->
+    <div class = "wrapper">
+        <div class = "box">
+            <div class = "image">
+                <a href="/wordle">
+                    <img src="{{ url_for('static', filename='wordle/images/wordle.webp') }}" alt="wordle image" loading="lazy"/>
+                </a>
+            </div>
+        </div>
+        <!-- About the project  -->
+        <div class="box">
+            <div id = "header">
+                 <h1>Wordle</h1>
+            </div>
+            <div class = "text">
+                <p> This is my second project that used JS, Flask, Jinja2, and CSS. I want to try to use some API’s and web scraping. I decided to make a more complex version of Wordle where for this one it scarps a word from Merriam Webster word of the day site. Then makes a grid that is n x n (n being the length of the word). Then for checking the word it using WordsAPI to check and see I the use input a real word. Besides that it’s very similar to the real game. <a href="/wordle"> Click here</a> or on the image to give it a try.
+</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

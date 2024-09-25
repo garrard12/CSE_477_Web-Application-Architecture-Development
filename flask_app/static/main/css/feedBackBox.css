@@ -1,0 +1,25 @@
+/*
+    All the pop up info regarding feedback information
+ */
+.popUpForm{
+    background-color: #FFC0CB;
+    width: 40%;
+    height: 40%;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    right: 30%;
+    top: 30%;
+    z-index: -1;
+    border-radius: 25%;
+    opacity: 0;
+}
+#nameInput{
+
+}
+#emailInput{
+
+}
+#commentBox{
+
+}

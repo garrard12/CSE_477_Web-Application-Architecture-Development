@@ -1,0 +1,95 @@
+{% extends 'shared/layout.html' %}
+{% block extracss %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='main/css/resume.css') }}">
+{% endblock %}
+
+{% block maincontent %}
+
+    {# For each institution - generate a row #}
+      {% for inst_id, inst in resume_data.items() %}
+        {#Gathers all the data for instruction stuff#}
+          <div class = "title">
+             <h1 class="companyName ">{{ inst['name']}} </h1>
+                <div class = "department">
+                  {% if inst['department'] is not none and inst['department'] is not sameas("NULL") %}
+                      <p>Department: {{ inst['department']}}</p>
+                  {% endif %}
+                </div>
+                {# Location #}
+               <p class = "location">
+                {% if inst['address'] is not none and inst['address'] is not sameas("NULL")-%}
+                    {{ inst['address']}}
+                {% endif -%}
+                {%if inst['city'] is not none and inst['city'] is not sameas("NULL") -%}
+                    {{ inst['city']}},
+                {% endif -%}
+                {%if inst['state'] is not none and inst['state'] is not sameas("NULL")-%}
+                   {{ inst['state']}}
+                {% endif -%}
+                {%if inst['zip'] is not none and inst['zip'] is not sameas("NULL")-%}
+                   {{ inst['zip']}}
+                {%- endif -%}
+                </p>
+          </div>
+
+        {# end of the instruction checks #}
+
+        {# Start of positions #}
+        {% if inst['positions'] != {} %}
+          {% for pos_id, pos in inst['positions'].items() %}
+          {# The title and responsisbilts then how long you worked thierr for #}
+          <div class="positions" >
+              <h3 class ="titleJob">{{ pos['title']}} </h3>
+                <p class = "responsibilities"> {{ pos['responsibilities'] }}</p>
+                <div class = "date">
+                    {%if pos['end_date'] in [None, "NULL", '1999-09-09'] or pos['end_date'] == '1999-09-09'%}
+                        <p>{{ pos['start_date'] }} - Present</p>
+                    {% else %}
+                        <p>{{ pos['start_date'] }} - {{ pos['end_date'] }}</p>
+                    {% endif %}
+                </div>
+          </div>
+            {# start of Experiences  #}
+            {% if pos['experiences'] != {} %}
+                {% for exp_id, exp in pos['experiences'].items() %}
+                    <div class ="experiences">
+                        <li>
+                           {#  Prints the name and descriptions of the positions that were work at  #}
+                            {% if  exp['hyperlink'] is not none and  exp['hyperlink'] is not sameas("NULL")%}
+                                <a href="{{ exp['hyperlink'] }}">{{ exp['name'] }}</a>: {{ exp['description'] }}
+                            {% else  %}
+                                 {{ exp['name'] }}: {{ exp['description'] }}
+                            {% endif %}
+
+                            {#print all the skills on one row if it not empty #}
+                            {% if exp['skills'] != {} %}
+                                <p class = "skills">
+                                Skills
+                                {% for exp_id, skill in exp['skills'].items() %}
+                                    {{skill['name']}}: {{ skill['skill_level']}}
+                                    {{ ", " if not loop.last else "" }}
+                                {% endfor %}
+                                </p>
+                            {% endif %}
+                        </li>
+                        {# How long you worked at that experiences#}
+                        <div class="dateExperiences">
+                                {% if exp['start_date'] is not none and exp['start_date'] is not sameas("NULL") %}
+                                {% if exp['end_date'] is none or exp['end_date'] is sameas("NULL") %}
+                                    <p> {{ exp['start_date'] }} - Present</p>
+                                {% else %}
+                                    <p>{{ exp['start_date'] }} - {{ exp['end_date'] }}</p>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      <hr>
+      {# put a hard line after each one of position#}
+      {% endfor %}
+{% endblock %}
+
+

@@ -1,0 +1,57 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='wordle/CSS/wordle.css') }}">
+{% endblock %}
+
+
+{% block maincontent %}
+    {# The pop up form how to play the game  #}
+    <div id="popup">
+        <p> Welcome to a Wordle here are the rules for this game. This is a word guessing game, the rules are pretty simple try to guess the word in  N number of try’s. When you guess a word the letter will change color. If it green you have it in the correct location, If yellow correct letter but wrong location, Grey the letter is not in the word.  If you get the word correct you will be added the leader boards but only if you get it.
+ </p>
+        <button type="button" id="close">close</button>
+    </div>
+
+    {# The body for world  #}
+    <div class = "wordle">
+        <h1 id="title"> Wordle</h1>
+        <hr>
+
+        {# Game that made is JS  #}
+        <div id = "gameBoard"></div>
+
+        {# Score that made is JS once game finshed #}
+        <div id = "scoreBoard"></div>
+
+        {# If the user input anything wrong #}
+        <div class ="error">
+            <div id = notRealWordContainer></div>
+            <div id = "shortWord"></div>
+        </div>
+
+        {# Key board #}
+        <div class = "keyboard" >
+            <div class="row">
+                {% for let in ['Q','W','E','R','T','Y','U','I','O','P','Delete'] %}
+                    <button class="letter" id={{ let }}>{{ let }}</button>
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for let in ['A','S','D','F','G','H','J','K','L','Enter'] %}
+                    <button class="letter" id="{{ let }}">{{ let }}</button>
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for let in ['Z','X','C','V','B','N','M'] %}
+                    <button class="letter" id={{ let }}>{{ let }}</button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extrajs %}
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='wordle/javascript/wordle.js') }}" defer></script>
+{% endblock %}

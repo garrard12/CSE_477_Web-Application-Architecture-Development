@@ -1,0 +1,41 @@
+/*
+    The page layout
+ */
+.Login{
+    margin: auto;
+    width: 30%;
+    height: 75%;
+}
+/*
+    The over arching form layout
+ */
+.Userinput{
+    display: flex;
+    justify-content: center;
+    margin:2.5vh 0;
+}
+/*
+    For the password box
+ */
+.password{
+    margin: 2.5vh 0;
+}
+/*
+    For the user input
+ */
+.user{
+    margin: 2.5vh 0;
+}
+/*
+    For the tittle of the screen
+ */
+#title{
+    display: flex;
+    justify-content: center;
+}
+/**
+    when the user puts in the wrong input
+ */
+#incorrectLogin{
+    color: #FF0000;
+}

@@ -1,0 +1,108 @@
+
+/**
+    make the pop module styling
+ */
+#popup {
+    background-color: #FFC0CB;
+    width: 40%;
+    height: 40%;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    right: 30%;
+    top: 30%;
+    z-index: 99;
+    border-radius: 15%;
+    opacity: 1;
+}
+/* game board wrapper */
+.wordle{
+    margin: auto;
+    width: 50%;
+    height: 75%;
+}
+/* tittle to the page */
+#title{
+    display: flex;
+    justify-content: center;
+}
+/*key board wrapper */
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* each letter display*/
+.letter {
+    background-color:#818384;
+    border: none;
+    color: #F8F8F8;
+    justify-content: center;
+    padding: .5em 1em;
+    margin: .3em;
+}
+/*
+Change the color of the key when the
+cursor moves over it
+*/
+.letter:hover{
+    background-color: #5A5A5A;
+}
+/*
+centers the game baord to the middle of the screen
+ */
+#gameBoard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* The size from one */
+.gridElement {
+    border: .1em solid #000000;
+    margin: .3em;
+    height: 3em;
+    width: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+how the row should be formed
+ */
+.gridRow {
+  display: flex;
+}
+/**
+Error when the user input ir wrongly
+ */
+.error{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #FF0000;
+}
+/**
+Center the score board to the div
+ */
+#scoreBoard{
+    text-align: center
+}
+/**
+    Capitalize the word of the dat
+*/
+#secretWord{
+    text-transform: capitalize;
+}
+/**
+    remove the padding from built points
+ */
+.topScores{
+    padding: 0;
+}
+/**
+    give the key board the same property as the grid
+ */
+.row{
+    display: flex;
+}

@@ -1,0 +1,6 @@
+experience_id,position_id,name,description,hyperlink,start_date,end_date
+1,1,Auto Owners,Add prefilled question for forms in additions to converting old question from java to react ,https://www.auto-owners.com/claims/car-accident-checklist,2021-05-01,2021-08-01
+2,2,Built a full stack website,"Learned HTML, JavaScript, and SQL",https://homework-mjp6xtbh7q-ue.a.run.app/home.html,2021-08-01,2023-12-14
+3,2,Computability and Formal Language Theory,"Formal models of computation such as finite state automata, pushdown automata and Turing machines. Formal definitions of languages, problems, and language classes including recursive, recursively enumerable, regular, and context free languages. The relationships among various models of computation, language classes, and problems. Church's thesis and the limits of computability. Proofs of program properties including correctness.
+",https://www.cse.msu.edu/Courses/cse460/,2021-08-01,2023-12-14
+4,3,Associate degree,Associate gather all my prerquestes to transfer into Michigan State University as a Computer Science student,https://catalog.grcc.edu/preview_program.php?catoid=54&poid=11996,2019-08-01,2021-05-01

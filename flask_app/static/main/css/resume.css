@@ -1,0 +1,69 @@
+/* Make the grid that allows 2 by 1  */
+.title{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+/* Center the location of that address  */
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Putting the department under the title of the institution */
+.department{
+    position: absolute;
+    left: 3.5%;
+    top: 65%;
+    margin-top: 0;
+    font-size: x-small;
+}
+/* The company/instruction that worked at */
+.companyName {
+    padding: 0% 5%;
+}
+/* The grid for all the positions that have work at*/
+.positions{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-left: 3.5%;
+    margin-bottom: 1%;
+    margin-top: 0%;
+}
+/* All the responsible that individual had */
+.responsibilities{
+    position: absolute;
+    top: 40%;
+    margin-top: 0;
+    font-size: medium;
+}
+/*Center the date */
+.date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Make a grid for the experience  */
+.experiences{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-left: 3.5%;
+}
+/* put the date for that experiences on the right */
+.dateExperiences{
+     display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+/* Put the skills under the experience */
+.skills{
+    margin-top: 0;
+    font-size: x-small;
+    margin-left: 3%;
+}
+/* What the tittle of the job you had */
+.titleJob{
+    margin-top: 0;
+}

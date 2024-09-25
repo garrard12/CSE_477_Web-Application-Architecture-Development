@@ -1,0 +1,40 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='signUp/newUser.css') }}">
+{% endblock %}
+
+{% block maincontent %}
+
+    <div class = "signUp">
+        <h1 id = "title"> Creat account</h1>
+        <hr>
+        <div class = Userinput>
+            <from action = "XXXX" method="post" enctype="multipart/form-data">
+
+                <div class = "newUserName">
+                    <label for = "email" > User Name </label>
+                    <input id = "userNameTextBox" type = "text" name = "email" placeholder="xxxx@email.com" title="User Name " required>
+                </div>
+                <div class = "newPassword">
+                    <label for = "password"> Password </label>
+                    <input id = "passwordTextBox" type = "password" name = "password" placeholder="Password" title="Password" required>
+                </div>
+                 <div id ="userAlreadyExists">
+                    {%  if userAlreayExist > 0 %}
+                        <p> This username already exist please try another one</p>
+                    {% endif %}
+                </div>
+                 <input id = "submitNewUser" type="button" value="SignUp">
+            </from>
+        </div>
+    </div>
+{% endblock %}
+
+{# importing Javascript #}
+{% block extrajs %}
+    <script src="{{ url_for('static', filename='signUp/newUser.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+

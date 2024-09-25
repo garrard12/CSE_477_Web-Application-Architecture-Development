@@ -1,0 +1,112 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auden Garrard personal page</title>
+  <!-- CSS styling -->
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/common.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/feedBackBox.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/favicon.ico') }}">
+  {% block extracss %}{% endblock %}
+
+</head>
+    <body>
+        <header>
+            <img class="banner" src="{{ url_for('static', filename='main/images/banner.jpg') }}" alt="images of rocks" loading="lazy" />
+        </header>
+        <!-- The Navigation bar that has name of class and links to other pages -->
+        <nav class = "navBar">
+            <div class="ClassName">
+                {% if user == 'Unknown'%}
+                    <p>CSE 477 - Homework 4</p>
+                {% else %}
+                    <p>Logged in as {{user}}</p>
+                {% endif %}
+            </div>
+
+
+            <!-- Page full expanded -->
+            <div class="pages">
+               <div id="desktop" class="fullscreen">
+                    <!-- Home -->
+                    <a href="/home">Home</a>
+                    <!-- Projects -->
+                    <a href="/project">Projects</a>
+                    <!-- resume -->
+                    <a href="/resume">Resume</a>
+                    <!-- Chat -->
+                   <a href="/chat">Chat</a>
+                   <!-- login -->
+                   {% if user == 'Unknown' %}
+                        <a href="/login">Login</a>
+                   <!-- logout -->
+                   {% else %}
+                        <a href="/logout">Logout</a>
+                   {% endif %}
+                    <!-- Linkin need icon  -->
+                    <a href="https://www.linkedin.com/in/auden-garrard-932aa0222/">
+                        <img src="{{ url_for('static', filename='main/images/social-linkedin.png') }}" alt="Linkin" loading="lazy"></a>
+                </div>
+
+                <!-- Mobile view  -->
+                <div id="MenuBar" class="dropdownMenu">
+                    <img src="{{ url_for('static', filename='main/images/menu-bar.png') }}" alt="menu bar tab" loading="lazy">
+                </div>
+            </div>
+        </nav>
+
+        <!-- The main content  -->
+        <main>
+          {% block maincontent %}{% endblock %}
+        </main>
+
+        <!-- the Feedback form -->
+        <div class="feedback">
+            <p id = "feedbackText"> Feed Back Form</p>
+        </div>
+
+        <!-- The popup box of the form -->
+        <div class = "popUpForm">
+            <form action="/processfeedback" method="post" enctype="multipart/form-data">
+                <div id = "nameInput">
+                     <label for = "name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name" title="Your name" required>
+                </div>
+                <br>
+                <div id="emailInput">
+                    <label for = "email"> Email:</label>
+                    <input type="text" id="email" name = "email" placeholder="Email" title="email" required>
+                </div>
+                <br>
+                <div id = "commentBox">
+                    <label for="comment">Comments:</label>
+                    <input type="text" id = "comment" name = "comment" placeholder="Comments" title="What you would like to say" required>
+                </div>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+
+      <!-- Footer Of the web -->
+        <footer>
+            <p> <span>&copy</span> Auden Garrard </p>
+        </footer>
+    </body>
+</html>
+<!-- Java scrip -->
+  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='main/js/feedBackForm.js') }}" defer></script>
+  {% block extrajs %}{% endblock %}
+
+
+
+
+
+
+
+

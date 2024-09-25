@@ -1,0 +1,29 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<div class = "wrapper">
+    <!-- image of Me -->
+    <div class = "box">
+        <div class = "image">
+            <img src="{{ url_for('static', filename='main/images/DSC_0102.jpg') }}" alt="Auden Rock climbing" loading="lazy"/>
+        </div>
+    </div>
+    <!-- About me section  -->
+    <div class="box">
+        <div id = "header">
+             <h1>Auden Garrard </h1>
+        </div>
+        <div class = "text">
+            <p id = "personalPargh">I am a senior studying Computer Science at Michigan State University. Although MSU is where I am pursuing my undergraduate degree, my academic journey started at Grand Rapids Community College as a transfer student. Not many people can say they've taken this path to reach MSU, and it's been an enriching experience that has shaped my academic career. Apart from my academic pursuits, rock climbing has been a constant passion throughout my life. As you can see in the picture, I continue to embrace this exhilarating sport to this day. What began as a personal hobby has evolved into an opportunity for me to introduce others to the joys and challenges of rock climbing. I find immense satisfaction in guiding others on their own climbing journeys, fostering a sense of adventure and accomplishment.I'm excited to combine my love for computer science and my dedication to rock climbing as I move forward in my academic and personal pursuits. If you share any of these interests or simply want to connect, feel free to reach out!</p>
+        </div>
+    </div>
+    <!-- Fun Fact  -->
+    <div id = "funFact" class="text">
+        <div class = "funFact ">
+          <p> Fun Fact : {{ fun_fact }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

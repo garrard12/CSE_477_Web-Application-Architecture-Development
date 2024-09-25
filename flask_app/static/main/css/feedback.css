@@ -1,0 +1,10 @@
+/* The title and move it to the center */
+.feedbackTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Allow spacing between each built point   */
+.builtPoints{
+    margin: 1%;
+}

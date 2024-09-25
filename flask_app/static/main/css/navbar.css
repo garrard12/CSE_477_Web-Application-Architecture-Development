@@ -1,0 +1,115 @@
+
+.NavWrapper{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+/* Puts Title of the page on the left
+* side of the scree
+*/
+.ClassName{
+    display: flex;
+    justify-content: left;
+    font-size: 2.5vh;
+    width: 100%;
+    float: left;
+    padding: 5%;
+    text-align: center;
+
+}
+/*
+* The possible links that can be clicked on
+*/
+.pages{
+    display: flex;
+    justify-content: right;
+    font-size: 10%;
+    width: 90%;
+    float: right;
+    text-align: right;
+    padding: 5%;
+}
+/*
+What the nav bar should look like when full screen
+*/
+.fullscreen{
+    display: flex;
+    justify-content: right;
+    font-size: 10%;
+    width: 90%;
+    float: right;
+    text-align: right;
+    /*padding: 5%;*/
+}
+/*
+    The base lay out of the nav bar
+ */
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    /*float: right;*/
+    line-height: 50px;
+    width: 100%;
+    background-color: #A9A9A9;
+    height: 12vh;
+    position: sticky;
+    top: 0;
+}
+/**
+    How the links should look
+ */
+nav a{
+    letter-spacing: 5px;
+    font-size: 2.5vh;
+    color: #000000;
+    padding: 2%;
+}
+/**
+    changes the color of the links when hover
+ */
+nav a:hover{
+    opacity: 0.5;
+}
+/**
+    Set the proportion to the images in nav bar
+ */
+nav a img{
+    max-width: 5vh;
+    height: auto;
+    padding: 5%;
+}
+/**
+    should the hamburger icon be showing
+ */
+.dropdownMenu{
+    display: none;
+}
+/**
+    should the hamburger icon be showing
+ */
+.visableDropDown{
+    display: block !important;
+}
+/*Adjust the screen to make it work for mobile*/
+@media screen and (max-width: 650px){
+    /* makes the display for the full screen adjust */
+    nav .fullscreen{
+        display: none;
+    }
+    /* Give the image for the drop down menu*/
+    nav .dropdownMenu{
+        height: 45px;
+        padding: 5%;
+        display: flex;
+        justify-content: right;
+    }
+    /* get rid of the linkin icon*/
+    nav a img{
+        display: none;
+    }
+}
+
+
+

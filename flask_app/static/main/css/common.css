@@ -1,0 +1,5 @@
+/* removes the padding and margin*/
+body{
+    padding: 0;
+    margin: 0;
+}

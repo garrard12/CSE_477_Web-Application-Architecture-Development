@@ -1,0 +1,44 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='Login/login.css') }}">
+{% endblock %}
+
+{% block maincontent %}
+    <div class = Login>
+
+        <h1 id = title> Login </h1>
+        <hr>
+        <div class ="Userinput">
+            {# The form for use to long into with a username and password box #}
+            <form action="/processlogin" method="post" enctype="multipart/form-data">
+                {# Username box #}
+                <div class="user">
+                    <label for = "email" > User Name </label>
+                    <input id = "userNameTextBox" type = "text" name = "email" placeholder="xxxx@gmail.com" title="User Name " required>
+                </div>
+                {# Password box #}
+                <div class = "password ">
+                    <label for = "password"> Password </label>
+                    <input id = "passwordTextBox" type = "password" name = "password" placeholder="Enter Password" title="Password" required>
+                </div>
+                <input id = "submitLogin" type="button" value="Login">
+                <input id = "newUser" type="button" value="Create Account">
+                 <div id ="incorrectLogin">
+                    {%  if loginConunter > 0 %}
+                        <p> Authentication failure: {{ loginConunter }}   </p>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}
+
+{# importing Javascript #}
+{% block extrajs %}
+    <script src="{{ url_for('static', filename='Login/login.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+
