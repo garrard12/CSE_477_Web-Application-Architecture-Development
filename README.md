@@ -20,7 +20,7 @@ garrardw at msu dot com
 
 ### Flask_app 
 
-This hold all the major parts of the code including the __database, __frontend __templates, __static, __utils. 
+This hold all the major parts of the code including the database, __frontend __templates, __static, __utils. 
 
 
 #### Databas 
@@ -32,8 +32,8 @@ Where the SQL tables are stored asa well as CVS for the intial data.
 The <ins>JS</ins>, <ins>CSS</ins>, and images to each page are stored
 
 #### Templates 
-HTMl/Django templates (not all of them have been update to since I want to keep a recoded of my growth) 
+<ins>HTMl/Django</ins> templates (not all of them have been update to since I want to keep a recoded of my growth) 
 
 #### utils/database
 
-Create the database from the SQL data and CSV using __python. In addition to allowing any changes/request to the database.  
+Create the database from the SQL data and CSV using <ins>python</ins>. In addition to allowing any changes/request to the database.  
