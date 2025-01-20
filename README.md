@@ -36,4 +36,4 @@ The <ins>JS</ins>, <ins>CSS</ins>, and images to each page are stored
 
 #### utils/database
 
-Create the database from the SQL data and CSV using <ins>python</ins>. In addition to allowing any changes/request to the database.  
+Create the database from the SQL data and CSV using <ins>Python</ins>. In addition to allowing any changes/request to the database.  
