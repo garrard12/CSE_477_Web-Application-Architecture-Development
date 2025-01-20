@@ -3,9 +3,18 @@
 
 ## Welcome 
 
-Hello there, 
+Hello there,
 
-If you have came acrosse this git repo you are looking at the scourse code of my personal [web site](temp) (it is curretly down at the moment). Since this web page was a learning proccess for me not nowing anything to pushing a website to the public that utilizes HTML, CSS, JavaScript, and Django for the front end as wel 
+If you've come across this Git repository, you're looking at the source code for my personal website (currently down at the moment). This project represents my learning process—from knowing nothing about web development to deploying a complete website that utilizes HTML, CSS, JavaScript, and Django for the frontend, as well as Python on the backend. The application was developed as a Dockerized application and deployed using Google Cloud.
+
+Below, you'll find an overview of the repository structure to make navigation easier, along with the languages and technologies used.
+
+If you have any questions about the reasoning behind certain decisions, feel free to reach out (email below).
+
+Have fun exploring and learning something new!
+Auden Garrard
+garrardw at msu dot com 
+
 ## Layout
 
 
