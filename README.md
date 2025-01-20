@@ -1,8 +1,13 @@
-# [Web Application Development](https://gitlab.msu.edu/cse477-fall-2023/course-materials/): Homework 3
+# [Web Application Development](https://gitlab.msu.edu/cse477-fall-2023/course-materials/): Fianl Project 
 
 
+## Welcome 
 
-## Purpose
+Hello there, 
+
+If you have came acrosse this git repo you are looking at the scourse code of my personal [web site](temp) (it is curretly down at the moment). Since this web page was a learning proccess for me not nowing anything to pushing a website to the public that utilizes HTML, CSS, JavaScript, and Django for the front end as wel 
+## Layout
+
 
 The purpose of this assignment is to provide hands-on experience with basic security, authentication and asyncryonous communication technologies for your web application, including:
 
